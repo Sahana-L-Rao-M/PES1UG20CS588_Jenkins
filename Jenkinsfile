@@ -16,8 +16,8 @@ pipeline{
 }
     stage('Deploy'){
       steps{
-//        sh './work'
-        sh 'qwerty '
+        sh './work'
+//        sh 'qwerty '
         echo 'Deploy Stage Successful'
       }
     }
