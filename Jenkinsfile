@@ -2,25 +2,29 @@ pipeline {
   agent any
   stages { 
     stage('Build') { 
-//       steps { 
+       steps { 
         echo 'Build Stage Successful'
-//       } 
+       } 
+    }
     stage('Test') { 
-//       steps { 
+       steps { 
         echo 'Test Stage Successful' 
+       }
+    }
 //         post { 
 //           always { 
 //             junit 'target/surefire-reports/*.xml
 //           }
 //         }
-//       }
-    } 
+//  }
+//    } 
     stage('Deploy') { 
 //       steps { 
-        echo 'Deployment Successful'
-//       }
+          echo 'Deployment Successful'
+      }
     }
-    post {
+}
+post {
       failure {
         echo 'Pipeline failed'
       }
