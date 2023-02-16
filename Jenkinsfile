@@ -9,14 +9,14 @@ pipeline{
     }
     stage('Test'){
       steps{
-        sh 'work --test'
+        sh './work --test'
         echo 'Test Stage Successful'
         
     }
 }
     stage('Deploy'){
       steps{
-//         sh './work'
+        sh './work'
         echo 'Deploy Stage Successful'
       }
     }
